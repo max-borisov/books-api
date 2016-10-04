@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 5
+  username: postgres
+  password:
+  template: template0
+
+development:
+  <<: *default
+  database: paladin_software_dev
+
+test:
+  <<: *default
+  database: paladin_software_test
+
+production:
+  <<: *default
+  database: <%= ENV['PALADIN_SOFTWARE_DATABASE_NAME'] %>
+  username: <%= ENV['PALADIN_SOFTWARE_DATABASE_USERNAME'] %>
+  password: <%= ENV['PALADIN_SOFTWARE_DATABASE_PASSWORD'] %>
