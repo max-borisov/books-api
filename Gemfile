@@ -36,7 +36,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'shoulda-matchers', '~> 3.0', require: false
+  gem 'shoulda-matchers', '~> 3.0'
   gem 'rspec-rails', '~> 3.5'
   gem 'capybara'
   gem 'factory_girl_rails', "~> 4.0"
